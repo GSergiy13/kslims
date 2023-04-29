@@ -1,0 +1,44 @@
+.join {
+    padding: 20px 0 100px;
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__content {
+        max-width: 565px;
+
+        &-title {
+            margin-bottom: 21px;
+        }
+    }
+
+    &__picture {
+        max-width: 550px;
+
+        &-img {
+            display: block;
+            width: 100%;
+        }
+    }
+}
+
+
+
+@media screen and (max-width: 568px) {
+    .join {
+        padding: 20px 0 25px;
+
+        &__wrapper {
+            flex-direction: column-reverse;
+        }
+
+        &__picture {
+            &-img {
+                margin: 7px 0 25px;
+            }
+        }
+    }
+}
