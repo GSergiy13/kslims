@@ -1,0 +1,133 @@
+.brands {
+  padding: 60px 0;
+  &__title {
+    font-size: 36px;
+    font-style: normal;
+    color: #29375A;
+    font-weight: 700;
+    line-height: 144%; /* 144.444% */
+    margin-bottom: 52px;
+    text-align: center;
+  }
+
+  &__wrapper {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+
+  .brands-box {
+    width: 100%;
+    max-width: 360px;
+    padding: 8px 8px 16px 8px ;
+    border-radius: 16px;
+    background: #FFF;
+    box-shadow: 3px 6px 20px 0px rgba(42, 88, 206, 0.25);
+    transition: all .8s;
+
+    &__picture {
+      position: relative;
+      width: 100%;
+      margin-bottom: 12px;
+
+        border-radius: 12px;
+      overflow: hidden;
+
+      &-img {
+        display: block;
+        width: 100%;
+        transition: all .8s;
+      }
+
+      .coming-soon {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 100%;
+        max-width: 158px;
+        text-align: center;
+        border-radius: 0px 12px 0px 12px;
+        background: #ADFF00;
+        padding: 6.2px 0px 6.2px 0px;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 114%;
+      }
+    }
+
+    &__nav {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .more {
+      display: block;
+      width: calc(50% - 6px);
+      padding: 12px 8px;
+      border-radius: 8px;
+      background: #ADFF00;
+      color: #29375A;
+      text-align: center;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 100%; /* 114.286% */
+          transition: all 0.6s;
+
+    &:hover {
+        background: #C6FF4D;
+    }
+    }
+
+    .kits {
+      display: block;
+      width: calc(50% - 6px);
+      padding: 12px 8px;
+      border-radius: 8px;
+      border: 1px solid #2A58CE;
+
+      color: #2A58CE;
+      text-align: center;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 100%; /* 114.286% */
+      transition: all 0.6s;
+
+      &:hover {
+          border: 1px solid #1E48B6;
+          color: #1E48B6;
+      }
+    }
+
+    &:hover {
+         box-shadow: 6px 12px 40px 0px rgba(42, 88, 206, 0.25);
+      .brands-box__picture-img {
+        transform: scale(1.05);
+      }
+    }
+  }
+}
+
+
+
+
+@media screen and (max-width: 568px) {
+
+.brands {
+    padding: 20px 0 40px;
+
+    &__title {
+      font-size: 24px;
+      margin-bottom: 32px;
+    }
+
+      .brands-box {
+    width: 100%;
+    max-width: 100%;
+      }
+}
+
+}
+

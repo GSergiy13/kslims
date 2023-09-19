@@ -1,185 +1,140 @@
 .faq {
-    padding: 50px 0;
+  padding: 60px 0 140px;
 
-    &__title {
-        margin-bottom: 60px;
+  &__title {
+    color: #29375A;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 144%;
+    margin-bottom: 60px;
+    text-align: center;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__col {
+    width: 100%;
+    max-width: calc(50% - 20px);
+  }
+
+  .faq-box {
+    padding: 32px;
+      border-radius: 12px;
+      background: #FFF;
+      box-shadow: 12px 12px 30px 0px rgba(32, 89, 199, 0.08);
+
+    &__head {
+      position: relative;
+      padding-right: 36px;
+      cursor: pointer;
+
+      &-title {
+        color: #29375A;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 140%;
+        text-transform: uppercase;
+      }
+
+      &-btn {
+        position: absolute;
+        width: 12px;
+        height: 12px;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+
+        &::after {
+          position: absolute;
+          content: '';
+          top: 50%;
+          left: 50%;
+          width: 100%;
+          height: 2px;
+          background: #2059C7;
+          transform: translate(-50%, -50%);
+        }
+        &::before {
+          position: absolute;
+          content: '';
+          top: 50%;
+          left: 50%;
+          width: 100%;
+          height: 2px;
+          background: #2059C7;
+          transform: translate(-50%, -50%) rotate(90deg);
+          transition: all 0.6s;
+        }
+      }
     }
 
-    .faq-box {
+    &__body {
+    overflow: hidden;
+    max-height: 0;
+    transition: .5s ease-in-out;
 
-        &:nth-child(1) {
+      &-content {
+        margin-top: 20px;
 
-            .faq-box__content {
-
-                &-item {
-                    position: relative;
-                    list-style: none;
-
-                    &::after {
-                        content: '';
-                        position: absolute;
-                        left: -18px;
-                        top: 5px;
-                        width: 20px;
-                        width: 10px;
-                        height: 10px;
-                        background-image: url('@img/marker-list-faq.png');
-                        background-size: contain;
-                        background-repeat: no-repeat;
-                    }
-                }
-            }
-        }
-
-        &__title {
-            font-weight: 700;
-            font-size: 20px;
-            line-height: 24px;
-            color: #D67F33;
-        }
-
-        &__btn {
-            position: absolute;
-            right: 0;
-            top: 50%;
-            width: 40px;
-            height: 40px;
-            transform: translateY(-50%);
-
-            &::after {
-                content: '';
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                width: 25px;
-                height: 4px;
-                background: #fff;
-                transform: translate(-50%, -50%);
-            }
-
-            &::before {
-                content: '';
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                width: 25px;
-                height: 4px;
-                background: #fff;
-                transform: translate(-50%, -50%) rotate(90deg);
-                transition: all 0.5s;
-            }
-        }
-
-        &__visibility {
-            position: relative;
-            padding: 30px 0;
-            border-top: 2px solid #929292;
-            cursor: pointer;
-        }
-
-        &__visibility.active {
-            .faq-box__btn {
-
-                &::before {
-                    opacity: 0;
-                }
-            }
-        }
-
-        &__hidden {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.4s ease-out;
-        }
-
-
-
-        &__content {
-            padding: 20px 0 30px;
-
-            &-text {
-                width: 100%;
-                max-width: 70%;
-                margin-bottom: 54px;
-                font-weight: 400;
-                font-size: 20px;
-                line-height: 24px;
-
-                span {
-                    color: #D67F33;
-                }
-            }
-
-            &-list {
-
-                padding-left: 20px;
-            }
-
-            &-item {
-                position: relative;
-                font-weight: 400;
-                font-size: 16px;
-                line-height: 20px;
-                list-style: disc;
-
-            }
-        }
+        color: #627093;
+        line-height: 150%; /* 150% */
+      }
     }
+    
+  }
+
+  .faq-box__head.active {
+    
+  .faq-box__head-btn {
+    &::before {
+      opacity: 0;
+    }
+  }
+  }
+
+  .faq-box + .faq-box  {
+    margin-top: 12px;
+  }
 }
 
 
-@media screen and (max-width: 568px) {
-    .faq {
-        padding: 25px 0;
-
-        &__title {
-            margin-bottom: 25px;
-        }
-
-        .faq-box {
-            &__visibility {
-                padding: 15px 0;
-            }
-
-            &__btn {
-                width: 20px;
-                height: 20px;
-
-                &::after {
-                    width: 15px;
-                }
-
-                &::before {
-                    width: 15px;
-                }
-            }
-
-            &__hidden.active {
-                padding: 0px 0 25px;
-            }
-
-            &__title {
-                width: 80%;
-                font-size: 18px;
-            }
-
-            &__content {
-                &-text {
-                    max-width: 100%;
-                    margin-bottom: 15px;
-                    font-size: 16px;
-                }
-
-                &-item {
-                    font-size: 14px;
 
 
-                }
+@media screen and (max-width: 768px) {
+  .faq {
+  padding: 60px 0 180px;
 
-                &-item+.faq-box__content-item {
-                    margin-top: 10px;
-                }
-            }
-        }
+  &__title {
+    font-size: 24px;
+    margin-bottom: 40px;
+  }
+
+  &__wrapper {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__col {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .faq-box {
+
+    &__head {
+
+      &-title {
+        font-size: 18px;
+      }
     }
+    
+  }
+
+  .faq-box + .faq-box  {
+    margin-top: 12px;
+  }
+}
 }

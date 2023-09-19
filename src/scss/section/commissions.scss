@@ -1,0 +1,85 @@
+.commissions {
+  padding: 60px 0;
+
+
+  &__title {
+    color: #29375A;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 144%; /* 144.444% */
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  &__wrapper {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+  }
+
+  .commissions-box {
+    width: 100%;
+    max-width: 356px;
+    padding: 24px 24px 32px 24px;
+    background: #2A58CE;
+    color: #fff;
+    text-align: center;
+
+    &__icon {
+      display: block;
+      width: 100%;
+      max-width: 64px;
+      margin: 0 auto 32px;
+    }
+
+    &__title {
+      font-size: 40px;
+      font-weight: 700;
+      line-height: 130%; /* 130% */
+      margin-bottom: 8px;
+    }
+
+    &__desc {
+      font-size: 24px;
+      line-height: 133%; /* 133.333% */
+    }
+
+    &:nth-child(1) {
+      border-radius: 60px 0px 0px 16px;
+    }
+
+     &:nth-child(3) {
+     border-radius: 0px 16px 60px 0px;
+    }
+  }
+}
+
+
+
+
+@media screen and (max-width: 568px) {
+  .commissions {
+  padding: 40px 0;
+
+
+  &__title {
+    font-size: 24px;
+    margin-bottom: 24px;
+  }
+
+  &__wrapper {
+    flex-direction: column;
+  }
+
+  .commissions-box {
+    max-width: 100%;
+  }
+
+  .container {
+    padding: 0;
+  }
+  }
+
+
+}

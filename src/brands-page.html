@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/head.html',{
+"title":"Lala Stars - to the moon together"
+})
+
+<body>
+	<div id="preloader" class="preloader">
+		<svg class="pl preloader__loader" viewBox="0 0 128 128" width="128px" height="128px">
+			<defs>
+				<linearGradient id="pl-grad" x1="0" y1="0" x2="0" y2="1">
+					<stop offset="0%" stop-color="#000" />
+					<stop offset="100%" stop-color="#fff" />
+				</linearGradient>
+				<mask id="pl-mask">
+					<rect x="0" y="0" width="128" height="128" fill="url(#pl-grad)" />
+				</mask>
+			</defs>
+			<g stroke-dasharray="32 32" stroke-dashoffset="-32" stroke-linecap="round" stroke-width="6">
+				<g class="pl__layer">
+					<g class="pl__lines" stroke="hsl(48,90%,50%)">
+						<g class="pl__line-g" transform="rotate(0,64,64) translate(0,-28)">
+							<polyline class="pl__line" points="64 32,64 64" />
+						</g>
+						<g class="pl__line-g" transform="rotate(30,64,64) translate(0,-28)">
+							<polyline class="pl__line" points="64 32,64 64" />
+						</g>
+						<g class="pl__line-g" transform="rotate(60,64,64) translate(0,-28)">
+							<polyline class="pl__line" points="64 32,64 64" />
+						</g>
+						<g class="pl__line-g" transform="rotate(90,64,64) translate(0,-28)">
+							<polyline class="pl__line" points="64 32,64 64" />
+						</g>
+						<g class="pl__line-g" transform="rotate(120,64,64) translate(0,-28)">
+							<polyline class="pl__line" points="64 32,64 64" />
+						</g>
+						<g class="pl__line-g" transform="rotate(150,64,64) translate(0,-28)">
+							<polyline class="pl__line" points="64 32,64 64" />
+						</g>
+						<g class="pl__line-g" transform="rotate(180,64,64) translate(0,-28)">
+							<polyline class="pl__line" points="64 32,64 64" />
+						</g>
+						<g class="pl__line-g" transform="rotate(210,64,64) translate(0,-28)">
+							<polyline class="pl__line" points="64 32,64 64" />
+						</g>
+						<g class="pl__line-g" transform="rotate(240,64,64) translate(0,-28)">
+							<polyline class="pl__line" points="64 32,64 64" />
+						</g>
+						<g class="pl__line-g" transform="rotate(270,64,64) translate(0,-28)">
+							<polyline class="pl__line" points="64 32,64 64" />
+						</g>
+						<g class="pl__line-g" transform="rotate(300,64,64) translate(0,-28)">
+							<polyline class="pl__line" points="64 32,64 64" />
+						</g>
+						<g class="pl__line-g" transform="rotate(330,64,64) translate(0,-28)">
+							<polyline class="pl__line" points="64 32,64 64" />
+						</g>
+					</g>
+				</g>
+				<g class="pl__layer" mask="url(#pl-mask)">
+					<g class="pl__lines" stroke="hsl(18,90%,50%)">
+						<g class="pl__line-g" transform="rotate(0,64,64) translate(0,-28)">
+							<polyline class="pl__line" points="64 32,64 64" />
+						</g>
+						<g class="pl__line-g" transform="rotate(30,64,64) translate(0,-28)">
+							<polyline class="pl__line" points="64 32,64 64" />
+						</g>
+						<g class="pl__line-g" transform="rotate(60,64,64) translate(0,-28)">
+							<polyline class="pl__line" points="64 32,64 64" />
+						</g>
+						<g class="pl__line-g" transform="rotate(90,64,64) translate(0,-28)">
+							<polyline class="pl__line" points="64 32,64 64" />
+						</g>
+						<g class="pl__line-g" transform="rotate(120,64,64) translate(0,-28)">
+							<polyline class="pl__line" points="64 32,64 64" />
+						</g>
+						<g class="pl__line-g" transform="rotate(150,64,64) translate(0,-28)">
+							<polyline class="pl__line" points="64 32,64 64" />
+						</g>
+						<g class="pl__line-g" transform="rotate(180,64,64) translate(0,-28)">
+							<polyline class="pl__line" points="64 32,64 64" />
+						</g>
+						<g class="pl__line-g" transform="rotate(210,64,64) translate(0,-28)">
+							<polyline class="pl__line" points="64 32,64 64" />
+						</g>
+						<g class="pl__line-g" transform="rotate(240,64,64) translate(0,-28)">
+							<polyline class="pl__line" points="64 32,64 64" />
+						</g>
+						<g class="pl__line-g" transform="rotate(270,64,64) translate(0,-28)">
+							<polyline class="pl__line" points="64 32,64 64" />
+						</g>
+						<g class="pl__line-g" transform="rotate(300,64,64) translate(0,-28)">
+							<polyline class="pl__line" points="64 32,64 64" />
+						</g>
+						<g class="pl__line-g" transform="rotate(330,64,64) translate(0,-28)">
+							<polyline class="pl__line" points="64 32,64 64" />
+						</g>
+					</g>
+				</g>
+			</g>
+		</svg>
+	</div>
+
+	<div class="wrapper">
+		@@include('html/header.html',{})
+
+		<section class="brand-card">
+			<div class="container">
+				<div class="baners">
+					<div class="baners__picture">
+						<img class="baners__picture-img pc-none" src="@img/baner-3.png" alt="baner">
+						<img class="baners__picture-img mb-none" src="@img/baner-3-mobail.jpg" alt="baner">
+
+						<a href="https://lala.bet/" class="baners__btn">Go to the website</a>
+					</div>
+
+					<div class="baners__picture">
+						<img class="baners__picture-img pc-none" src="@img/baner-1.jpg" alt="baner">
+						<img class="baners__picture-img mb-none" src="@img/baner-1-mobail.jpg" alt="baner">
+
+						<a href="https://jungliwin.com/" class="baners__btn">Go to the website</a>
+					</div>
+
+					<div class="baners__picture">
+						<img class="baners__picture-img pc-none" src="@img/baner-2.jpg" alt="baner">
+						<img class="baners__picture-img mb-none" src="@img/baner-2-mobail.jpg" alt="baner">
+
+						<a href="http://starzino.com" class="baners__btn">Go to the website</a>
+					</div>
+				</div>
+
+
+				<div class="tabs">
+					<div class="tab active">
+						Lala.bet
+					</div>
+					<div class="tab">
+						JungliWin
+					</div>
+					<div class="tab">
+						starzino
+					</div>
+				</div>
+
+				<div class="contents">
+					<div class="content">
+						<h2 class="content__title">Lala.bet</h2>
+
+						<p class="content__description">
+							LalaBet is a new online gambling brand featuring over 4000+ casino games, including sportsbook with
+							competitive odds .
+							Mobile first brand with integrated AI based retention technology and lifetime bonus system gives our
+							players the most
+							relevant and attractive content to get their exceptional gaming experience.
+						</p>
+
+						<div class="content-box">
+							<h3 class="content-box__title">Game Providers</h3>
+
+							<div class="content-box__wrapper">
+								<div class="content-box__item">Pragmatic Play</div>
+								<div class="content-box__item">Evolution Gaming</div>
+								<div class="content-box__item">Play'n Go</div>
+								<div class="content-box__item">Nolimit City</div>
+								<div class="content-box__item">Wazdan</div>
+								<div class="content-box__item">Ezugi</div>
+								<div class="content-box__item">NetEnt</div>
+								<div class="content-box__item">Red Tiger</div>
+								<div class="content-box__item">BGaming</div>
+								<div class="content-box__item">Pushgaming</div>
+								<div class="content-box__item">Relax Gaming</div>
+								<div class="content-box__item">Yggdrasil</div>
+								<div class="content-box__item">Betsoft</div>
+								<div class="content-box__item">Spribe</div>
+								<div class="content-box__item">Spinomenal</div>
+								<div class="content-box__item">Smartsoft Gaming</div>
+								<div class="content-box__item">1x2gaming</div>
+								<div class="content-box__item">Absolute Live Gaming</div>
+								<div class="content-box__item">AvatarUX</div>
+
+
+								<div class="content-box__hidden">
+									<div class="content-box__item">Evoplay</div>
+									<div class="content-box__item">Golden Race</div>
+									<div class="content-box__item">Hacksaw</div>
+									<div class="content-box__item">Kiron</div>
+									<div class="content-box__item">Leap Gaming</div>
+									<div class="content-box__item">Quickfire</div>
+									<div class="content-box__item">Vivo Gaming</div>
+									<div class="content-box__item">Thunderkick</div>
+									<div class="content-box__item">Booongo</div>
+									<div class="content-box__item">Playson</div>
+									<div class="content-box__item">3 Oaks Gaming</div>
+									<div class="content-box__item">Aviatrix</div>
+									<div class="content-box__item">Betsolutions</div>
+									<div class="content-box__item">Gamzix</div>
+									<div class="content-box__item">Habanero</div>
+									<div class="content-box__item">Jili Games</div>
+									<div class="content-box__item">PGSoft</div>
+									<div class="content-box__item">TVBet</div>
+									<div class="content-box__item">Mancala</div>
+									<div class="content-box__item">Quickspin</div>
+									<div class="content-box__item">Reevo</div>
+									<div class="content-box__item">1spin4win</div>
+									<div class="content-box__item">Mascot</div>
+									<div class="content-box__item">Lucky Streak</div>
+									<div class="content-box__item">Platipus</div>
+									<div class="content-box__item">Nucleus</div>
+									<div class="content-box__item">Netgame</div>
+									<div class="content-box__item">MrSlotty</div>
+									<div class="content-box__item">Lucky</div>
+									<div class="content-box__item">KA Gaming</div>
+									<div class="content-box__item">IGTech</div>
+									<div class="content-box__item">CT Interactive</div>
+									<div class="content-box__item">Booming</div>
+									<div class="content-box__item">Bet2Tech</div>
+									<div class="content-box__item">Belatra</div>
+									<div class="content-box__item">Atmosfera</div>
+									<div class="content-box__item">Gamebeat</div>
+									<div class="content-box__item">AE Sexy</div>
+									<div class="content-box__item">RubyPlay</div>
+									<div class="content-box__item">Tom Horn</div>
+									<div class="content-box__item">Beter Live</div>
+								</div>
+
+
+								<button class="dropShow">
+									See All
+								</button>
+							</div>
+						</div>
+
+
+						<div class="content-box">
+							<h3 class="content-box__title">Currencies</h3>
+
+							<div class="content-box__wrapper">
+								<div class="content-box__item">EUR</div>
+								<div class="content-box__item">USD</div>
+								<div class="content-box__item">AUD</div>
+								<div class="content-box__item">NZD</div>
+								<div class="content-box__item">CAD</div>
+								<div class="content-box__item">CHF</div>
+								<div class="content-box__item">NOK</div>
+								<div class="content-box__item">DKK</div>
+								<div class="content-box__item">PLN</div>
+								<div class="content-box__item">HUF</div>
+								<div class="content-box__item">CZK</div>
+								<div class="content-box__item">JPY</div>
+								<div class="content-box__item">HRK</div>
+								<div class="content-box__item">SGD</div>
+								<div class="content-box__item">KRW</div>
+								<div class="content-box__item">MXN</div>
+								<div class="content-box__item">BRL</div>
+								<div class="content-box__item">KZT</div>
+								<div class="content-box__item">AZN</div>
+								<div class="content-box__item">UZS</div>
+							</div>
+						</div>
+
+						<div class="content-box">
+							<h3 class="content-box__title">Languages</h3>
+
+							<div class="content-box__wrapper">
+
+
+
+								<div class="content-box__item">EN</div>
+								<div class="content-box__item">PT (BR)</div>
+								<div class="content-box__item">FR</div>
+								<div class="content-box__item">DE</div>
+								<div class="content-box__item">PL</div>
+								<div class="content-box__item">AU</div>
+								<div class="content-box__item">NZ</div>
+								<div class="content-box__item">CA EN</div>
+								<div class="content-box__item">CA FR</div>
+								<div class="content-box__item">NO</div>
+								<div class="content-box__item">KZ</div>
+								<div class="content-box__item">AZ</div>
+
+							</div>
+						</div>
+
+						<div class="content-box">
+							<h3 class="content-box__title">Payment metods</h3>
+
+							<div class="content-box__wrapper">
+								<div class="content-box__item">GooglePay</div>
+								<div class="content-box__item">ApplePay</div>
+								<div class="content-box__item">Mastercard</div>
+								<div class="content-box__item">Visa</div>
+								<div class="content-box__item">Crypto</div>
+								<div class="content-box__item">Revolut</div>
+								<div class="content-box__item">Sofort</div>
+								<div class="content-box__item">Tigerpay</div>
+								<div class="content-box__item">Vouchers</div>
+								<div class="content-box__item">PIX</div>
+								<div class="content-box__item">Pay4Fun</div>
+								<div class="content-box__item">Jeton</div>
+								<div class="content-box__item">Astropay</div>
+								<div class="content-box__item">Bank transfer</div>
+								<div class="content-box__item">Binance Pay</div>
+								<div class="content-box__item">Skrill</div>
+								<div class="content-box__item">Neteller</div>
+								<div class="content-box__item">Ezeewallet</div>
+								<div class="content-box__item">Flexepin</div>
+								<div class="content-box__item">Manual WD</div>
+								<div class="content-box__item">N26</div>
+								<div class="content-box__item">Neosurf</div>
+								<div class="content-box__item">PayID</div>
+
+
+								<div class="content-box__hidden">
+									<div class="content-box__item">Paysafecard</div>
+									<div class="content-box__item">Poli</div>
+									<div class="content-box__item">Rapid Transfer</div>
+									<div class="content-box__item">Bancontact</div>
+									<div class="content-box__item">UPI</div>
+									<div class="content-box__item">IMPS</div>
+									<div class="content-box__item">PhonePe</div>
+									<div class="content-box__item">PayTM</div>
+									<div class="content-box__item">IMPS</div>
+								</div>
+
+								<button class="dropShow">
+									See All
+								</button>
+
+
+							</div>
+						</div>
+
+						<div class="content-box">
+							<h3 class="content-box__title">Features</h3>
+
+							<div class="content-box__wrapper">
+								<div class="content-box__item">Curacao license</div>
+								<div class="content-box__item">Casino</div>
+								<div class="content-box__item">Betting</div>
+								<div class="content-box__item">AI based retention technology</div>
+								<div class="content-box__item">Gamification</div>
+								<div class="content-box__item">Professional VIP department</div>
+								<div class="content-box__item">24/7 live support chat</div>
+								<div class="content-box__item">Cashback</div>
+								<div class="content-box__item">Rakeback</div>
+								<div class="content-box__item">Level up prizes</div>
+								<div class="content-box__item">Cash awards</div>
+							</div>
+						</div>
+
+					</div>
+
+
+					<div class="content">
+						<h2 class="content__title">JungliWin</h2>
+
+						<p class="content__description">
+							JungliWin is the number one sports betting project, where players can enjoy top-tier sports with unmatched
+							odds, explore
+							a vast selection of 4000+ casino games, and experience it all on a mobile friendly platform. Our
+							integrated AI-powered
+							retention technology and a lifetime bonus system ensure our customers receive the most relevant and
+							captivating content,
+							making their gaming experience superior.
+						</p>
+
+						<div class="content-box">
+							<h3 class="content-box__title">Game Providers</h3>
+
+							<div class="content-box__wrapper">
+								<div class="content-box__item">Pragmatic Play</div>
+								<div class="content-box__item">Evolution Gaming</div>
+								<div class="content-box__item">Play'n Go</div>
+								<div class="content-box__item">Nolimit City</div>
+								<div class="content-box__item">Wazdan</div>
+								<div class="content-box__item">Ezugi</div>
+								<div class="content-box__item">NetEnt</div>
+								<div class="content-box__item">Red Tiger</div>
+								<div class="content-box__item">BGaming</div>
+								<div class="content-box__item">Relax Gaming</div>
+								<div class="content-box__item">Yggdrasil</div>
+								<div class="content-box__item">Betsoft</div>
+								<div class="content-box__item">Beter Live</div>
+								<div class="content-box__item">Spribe</div>
+								<div class="content-box__item">Spinomenal</div>
+								<div class="content-box__item">Smartsoft Gaming</div>
+								<div class="content-box__item">Blueprint</div>
+								<div class="content-box__item">Absolute Live Gaming</div>
+								<div class="content-box__item">AvatarUX</div>
+								<div class="content-box__item">Evoplay</div>
+
+
+
+
+
+
+
+								<div class="content-box__hidden">
+									<div class="content-box__item">Golden Race</div>
+									<div class="content-box__item">Hacksaw</div>
+									<div class="content-box__item">Kiron</div>
+									<div class="content-box__item">Leap Gaming</div>
+									<div class="content-box__item">Golden Hero</div>
+									<div class="content-box__item">High5</div>
+									<div class="content-box__item">Thunderkick</div>
+									<div class="content-box__item">Booongo</div>
+									<div class="content-box__item">Playson</div>
+									<div class="content-box__item">3 Oaks Gaming</div>
+									<div class="content-box__item">Aviatrix</div>
+									<div class="content-box__item">Betsolutions</div>
+									<div class="content-box__item">Gamzix</div>
+									<div class="content-box__item">Habanero</div>
+									<div class="content-box__item">Mancala</div>
+									<div class="content-box__item">PGSoft</div>
+									<div class="content-box__item">TVBet</div>
+									<div class="content-box__item">Quickspin</div>
+									<div class="content-box__item">Reevo</div>
+									<div class="content-box__item">1spin4win</div>
+									<div class="content-box__item">Mascot</div>
+									<div class="content-box__item">Lucky Streak</div>
+									<div class="content-box__item">Platipus</div>
+									<div class="content-box__item">Nucleus</div>
+									<div class="content-box__item">Netgame</div>
+									<div class="content-box__item">MrSlotty</div>
+									<div class="content-box__item">Lucky</div>
+									<div class="content-box__item">KA Gaming</div>
+									<div class="content-box__item">IGTech</div>
+									<div class="content-box__item">CT Interactive</div>
+									<div class="content-box__item">Booming</div>
+									<div class="content-box__item">Bet2Tech</div>
+									<div class="content-box__item">Belatra</div>
+									<div class="content-box__item">Atmosfera</div>
+									<div class="content-box__item">Gamebeat</div>
+									<div class="content-box__item">AE Sexy</div>
+									<div class="content-box__item">RubyPlay</div>
+									<div class="content-box__item">Tom Horn</div>
+									<div class="content-box__item">Big Time Gaming</div>
+									<div class="content-box__item">Fugaso</div>
+								</div>
+
+								<button class="dropShow">
+									See All
+								</button>
+
+
+
+							</div>
+						</div>
+
+
+						<div class="content-box">
+							<h3 class="content-box__title">Currencies</h3>
+
+							<div class="content-box__wrapper">
+								<div class="content-box__item">EUR</div>
+								<div class="content-box__item">USD</div>
+								<div class="content-box__item">AUD</div>
+								<div class="content-box__item">NZD</div>
+								<div class="content-box__item">CAD</div>
+								<div class="content-box__item">CHF</div>
+								<div class="content-box__item">NOK</div>
+								<div class="content-box__item">DKK</div>
+								<div class="content-box__item">PLN</div>
+								<div class="content-box__item">HUF</div>
+								<div class="content-box__item">CZK</div>
+								<div class="content-box__item">JPY</div>
+								<div class="content-box__item">HRK</div>
+								<div class="content-box__item">SGD</div>
+								<div class="content-box__item">KRW</div>
+								<div class="content-box__item">MXN</div>
+								<div class="content-box__item">BRL</div>
+								<div class="content-box__item">KZT</div>
+								<div class="content-box__item">AZN</div>
+								<div class="content-box__item">UZS</div>
+							</div>
+						</div>
+
+						<div class="content-box">
+							<h3 class="content-box__title">Languages</h3>
+
+							<div class="content-box__wrapper">
+
+
+
+								<div class="content-box__item">EN</div>
+								<div class="content-box__item">PT (BR)</div>
+								<div class="content-box__item">FR</div>
+								<div class="content-box__item">DE</div>
+								<div class="content-box__item">PL</div>
+								<div class="content-box__item">AU</div>
+								<div class="content-box__item">NZ</div>
+								<div class="content-box__item">CA EN</div>
+								<div class="content-box__item">CA FR</div>
+								<div class="content-box__item">NO</div>
+								<div class="content-box__item">KZ</div>
+								<div class="content-box__item">AZ</div>
+
+							</div>
+						</div>
+
+						<div class="content-box">
+							<h3 class="content-box__title">Payment metods</h3>
+
+							<div class="content-box__wrapper">
+								<div class="content-box__item">GooglePay</div>
+								<div class="content-box__item">ApplePay</div>
+								<div class="content-box__item">Mastercard</div>
+								<div class="content-box__item">Visa</div>
+								<div class="content-box__item">Crypto</div>
+								<div class="content-box__item">Revolut</div>
+								<div class="content-box__item">Sofort</div>
+								<div class="content-box__item">Tigerpay</div>
+								<div class="content-box__item">Vouchers</div>
+								<div class="content-box__item">PIX</div>
+								<div class="content-box__item">Pay4Fun</div>
+								<div class="content-box__item">Jeton</div>
+								<div class="content-box__item">Astropay</div>
+								<div class="content-box__item">Bank transfer</div>
+								<div class="content-box__item">Binance Pay</div>
+								<div class="content-box__item">Skrill</div>
+								<div class="content-box__item">Neteller</div>
+								<div class="content-box__item">Ezeewallet</div>
+								<div class="content-box__item">Flexepin</div>
+								<div class="content-box__item">Manual WD</div>
+								<div class="content-box__item">N26</div>
+								<div class="content-box__item">Neosurf</div>
+								<div class="content-box__item">PayID</div>
+								<div class="content-box__item">Paysafecard</div>
+
+
+								<div class="content-box__hidden">
+									<div class="content-box__item">Poli</div>
+									<div class="content-box__item">Rapid Transfer</div>
+									<div class="content-box__item">Bancontact</div>
+									<div class="content-box__item">UPI</div>
+									<div class="content-box__item">IMPS</div>
+									<div class="content-box__item">PhonePe</div>
+									<div class="content-box__item">PayTM</div>
+									<div class="content-box__item">IMPS</div>
+								</div>
+
+								<button class="dropShow">
+									See All
+								</button>
+
+
+
+							</div>
+						</div>
+
+						<div class="content-box">
+							<h3 class="content-box__title">Features</h3>
+
+							<div class="content-box__wrapper">
+								<div class="content-box__item">Curacao license</div>
+								<div class="content-box__item">Casino</div>
+								<div class="content-box__item">Betting</div>
+								<div class="content-box__item">AI based retention technology</div>
+								<div class="content-box__item">Gamification</div>
+								<div class="content-box__item">Professional VIP department</div>
+								<div class="content-box__item">24/7 live support chat</div>
+								<div class="content-box__item">Cashback</div>
+								<div class="content-box__item">Rakeback</div>
+								<div class="content-box__item">Level up prizes</div>
+								<div class="content-box__item">Cash awards</div>
+							</div>
+						</div>
+
+					</div>
+
+
+
+
+					<div class="content">
+						<h2 class="content__title">Starzino</h2>
+
+						<p class="content__description">
+							Starzino is the latest online gambling sensation that offers an impressive array of over 4000+ casino
+							games, thrilling
+							Wheel of Fortune and various sportsbook with highly competitive odds. Our brand stands out with unique
+							gamification
+							elements and compelling tournaments, adding extra excitement to the gaming journey.
+						</p>
+
+						<div class="content-box">
+							<h3 class="content-box__title">Game Providers</h3>
+
+							<div class="content-box__wrapper">
+								<div class="content-box__item">Pragmatic Play</div>
+								<div class="content-box__item">Evolution Gaming</div>
+								<div class="content-box__item">Play'n Go</div>
+								<div class="content-box__item">Nolimit City</div>
+								<div class="content-box__item">Wazdan</div>
+								<div class="content-box__item">Ezugi</div>
+								<div class="content-box__item">NetEnt</div>
+								<div class="content-box__item">Red Tiger</div>
+								<div class="content-box__item">BGaming</div>
+								<div class="content-box__item">Pushgaming</div>
+								<div class="content-box__item">Relax Gaming</div>
+								<div class="content-box__item">Yggdrasil</div>
+								<div class="content-box__item">Betsoft</div>
+								<div class="content-box__item">Spribe</div>
+								<div class="content-box__item">Spinomenal</div>
+								<div class="content-box__item">Smartsoft Gaming</div>
+								<div class="content-box__item">1x2gaming</div>
+								<div class="content-box__item">Absolute Live Gaming</div>
+
+
+								<div class="content-box__hidden">
+									<div class="content-box__item">AvatarUX</div>
+									<div class="content-box__item">Evoplay</div>
+									<div class="content-box__item">Golden Race</div>
+									<div class="content-box__item">Hacksaw</div>
+									<div class="content-box__item">Kiron</div>
+									<div class="content-box__item">Leap Gaming</div>
+									<div class="content-box__item">Quickfire</div>
+									<div class="content-box__item">Vivo Gaming</div>
+									<div class="content-box__item">Thunderkick</div>
+									<div class="content-box__item">Booongo</div>
+									<div class="content-box__item">Playson</div>
+									<div class="content-box__item">3 Oaks Gaming</div>
+									<div class="content-box__item">Aviatrix</div>
+									<div class="content-box__item">Betsolutions</div>
+									<div class="content-box__item">Gamzix</div>
+									<div class="content-box__item">Habanero</div>
+									<div class="content-box__item">Jili Games</div>
+									<div class="content-box__item">PGSoft</div>
+									<div class="content-box__item">TVBet</div>
+									<div class="content-box__item">Mancala</div>
+									<div class="content-box__item">Quickspin</div>
+									<div class="content-box__item">Reevo</div>
+									<div class="content-box__item">1spin4win</div>
+									<div class="content-box__item">Mascot</div>
+									<div class="content-box__item">Lucky Streak</div>
+									<div class="content-box__item">Platipus</div>
+									<div class="content-box__item">Nucleus</div>
+									<div class="content-box__item">Netgame</div>
+									<div class="content-box__item">MrSlotty</div>
+									<div class="content-box__item">Lucky</div>
+									<div class="content-box__item">KA Gaming</div>
+									<div class="content-box__item">IGTech</div>
+									<div class="content-box__item">CT Interactive</div>
+									<div class="content-box__item">Booming</div>
+									<div class="content-box__item">Bet2Tech</div>
+									<div class="content-box__item">Belatra</div>
+									<div class="content-box__item">Atmosfera</div>
+									<div class="content-box__item">Gamebeat</div>
+									<div class="content-box__item">AE Sexy</div>
+									<div class="content-box__item">RubyPlay</div>
+									<div class="content-box__item">Tom Horn</div>
+									<div class="content-box__item">Beter Live</div>
+								</div>
+
+								<button class="dropShow">
+									See All
+								</button>
+
+
+							</div>
+						</div>
+
+
+						<div class="content-box">
+							<h3 class="content-box__title">Currencies</h3>
+
+							<div class="content-box__wrapper">
+								<div class="content-box__item">EUR</div>
+								<div class="content-box__item">USD</div>
+								<div class="content-box__item">AUD</div>
+								<div class="content-box__item">NZD</div>
+								<div class="content-box__item">CAD</div>
+								<div class="content-box__item">CHF</div>
+								<div class="content-box__item">NOK</div>
+								<div class="content-box__item">DKK</div>
+								<div class="content-box__item">PLN</div>
+								<div class="content-box__item">HUF</div>
+								<div class="content-box__item">CZK</div>
+								<div class="content-box__item">JPY</div>
+								<div class="content-box__item">HRK</div>
+								<div class="content-box__item">SGD</div>
+								<div class="content-box__item">KRW</div>
+								<div class="content-box__item">MXN</div>
+								<div class="content-box__item">BRL</div>
+								<div class="content-box__item">KZT</div>
+								<div class="content-box__item">AZN</div>
+								<div class="content-box__item">UZS</div>
+							</div>
+						</div>
+
+						<div class="content-box">
+							<h3 class="content-box__title">Languages</h3>
+
+							<div class="content-box__wrapper">
+
+
+
+								<div class="content-box__item">EN</div>
+								<div class="content-box__item">PT (BR)</div>
+								<div class="content-box__item">FR</div>
+								<div class="content-box__item">DE</div>
+								<div class="content-box__item">PL</div>
+								<div class="content-box__item">AU</div>
+								<div class="content-box__item">NZ</div>
+								<div class="content-box__item">CA EN</div>
+								<div class="content-box__item">CA FR</div>
+								<div class="content-box__item">NO</div>
+								<div class="content-box__item">KZ</div>
+								<div class="content-box__item">AZ</div>
+
+							</div>
+						</div>
+
+						<div class="content-box">
+							<h3 class="content-box__title">Payment metods</h3>
+
+							<div class="content-box__wrapper">
+								<div class="content-box__item">GooglePay</div>
+								<div class="content-box__item">ApplePay</div>
+								<div class="content-box__item">Mastercard</div>
+								<div class="content-box__item">Visa</div>
+								<div class="content-box__item">Crypto</div>
+								<div class="content-box__item">Revolut</div>
+								<div class="content-box__item">Sofort</div>
+								<div class="content-box__item">Tigerpay</div>
+								<div class="content-box__item">Vouchers</div>
+								<div class="content-box__item">PIX</div>
+								<div class="content-box__item">Pay4Fun</div>
+								<div class="content-box__item">Jeton</div>
+								<div class="content-box__item">Astropay</div>
+								<div class="content-box__item">Bank transfer</div>
+								<div class="content-box__item">Binance Pay</div>
+								<div class="content-box__item">Skrill</div>
+								<div class="content-box__item">Neteller</div>
+								<div class="content-box__item">Ezeewallet</div>
+								<div class="content-box__item">Flexepin</div>
+								<div class="content-box__item">Manual WD</div>
+								<div class="content-box__item">N26</div>
+								<div class="content-box__item">Neosurf</div>
+								<div class="content-box__item">PayID</div>
+
+								<div class="content-box__hidden">
+									<div class="content-box__item">Paysafecard</div>
+									<div class="content-box__item">Poli</div>
+									<div class="content-box__item">Rapid Transfer</div>
+									<div class="content-box__item">Bancontact</div>
+									<div class="content-box__item">UPI</div>
+									<div class="content-box__item">IMPS</div>
+									<div class="content-box__item">PhonePe</div>
+									<div class="content-box__item">PayTM</div>
+									<div class="content-box__item">IMPS</div>
+								</div>
+
+								<button class="dropShow">
+									See All
+								</button>
+							</div>
+						</div>
+
+						<div class="content-box">
+							<h3 class="content-box__title">Features</h3>
+
+							<div class="content-box__wrapper">
+								<div class="content-box__item">Curacao license</div>
+								<div class="content-box__item">Casino</div>
+								<div class="content-box__item">Betting</div>
+								<div class="content-box__item">AI based retention technology</div>
+								<div class="content-box__item">Gamification</div>
+								<div class="content-box__item">Professional VIP department</div>
+								<div class="content-box__item">24/7 live support chat</div>
+								<div class="content-box__item">Cashback</div>
+								<div class="content-box__item">Rakeback</div>
+								<div class="content-box__item">Level up prizes</div>
+								<div class="content-box__item">Cash awards</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</section>
+
+		@@include('html/footer.html',{})
+	</div>
+
+
+	<script src="js/app.min.js"></script>
+</body>
+
+</html>

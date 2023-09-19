@@ -1,184 +1,263 @@
 import Swiper, { Navigation, Pagination, Autoplay } from 'swiper';
 
-import toggleClassContent from './modules/toggleClassContent.js';
-import modal from './modules/modal.js';
-import mobailMenu from './modules/mobailMenu.js';
-import acorrdionBox from './modules/acorrdion.js';
+window.addEventListener('DOMContentLoaded', function () {
 
 
-window.addEventListener('DOMContentLoaded', function() {
+  const preloader = document.querySelector('.preloader');
 
-  const loader = document.querySelector('.loader');
-
-  window.onload =() => {
-    loader.style.opacity = 0;
+  window.onload = () => {
     setTimeout(() => {
-      loader.style.display = 'none';
+      preloader.classList.add('preloader--hide')
     }, 1000)
-  };
+  }
+
+  const listItems = document.querySelectorAll('.menu-list__item-link');
+
+  const burger = document.querySelector('.burger'),
+    navigarion = document.querySelector('.navigarion'),
+    close = document.querySelector('.navigarion__close');
+
+  burger.addEventListener('click', function () {
+    navigarion.classList.add('active');
+    burger.classList.add('active');
+  });
+
+  listItems.forEach(list => {
+    list.addEventListener('click', function () {
+      navigarion.classList.remove('active');
+    });
+  })
+
+  close.addEventListener('click', function () {
+    navigarion.classList.remove('active');
+    burger.classList.remove('active');
+  });
+
+
+  try {
+    function MoreInfoShow() {
+      const container = document.body;
+      const moreInfoElements = document.querySelectorAll('.more-info');
+      let activeMoreInfo = null;
+
+      container.addEventListener('click', (e) => {
+        const target = e.target;
+
+        if (target.classList.contains('registration-singIn') || target.classList.contains('registration-singUp')) {
+          if (activeMoreInfo) {
+            activeMoreInfo.classList.remove('active');
+          }
+
+          target.nextElementSibling.classList.add('active');
+          activeMoreInfo = target.nextElementSibling;
+        } else if (target.classList.contains('btn-more-drop') || target.classList.contains('btn-advantages-more') || target.classList.contains('hint-button')) {
+          target.nextElementSibling.classList.add('active');
+
+          if (activeMoreInfo !== target.nextElementSibling) {
+            setTimeout(() => {
+              target.nextElementSibling.classList.remove('active');
+            }, 5000);
+          }
+        } else if (!target.classList.contains('more-info')) {
+          moreInfoElements.forEach((elem) => {
+            elem.classList.remove('active');
+          });
+          activeMoreInfo = null;
+        }
+      });
+    }
+
+    MoreInfoShow();
+
+
+
+  } catch (e) {
+    console.log(e);
+  }
+
+
+
+  try {
 
     const swiper = new Swiper('.swiper', {
-        modules: [ Navigation, Pagination, Autoplay ],
-      freeMode: true,
-        spaceBetween: 20,
-        loop: true,
-        autoHeight: true,
-        direction: 'horizontal',
-        autoplay: {
-          delay: 5000,
-          pauseOnMouseEnter: true,
-          disableOnInteraction: false
-        },
-        
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        },
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true
-        },
+      // Optional parameters
+      modules: [Navigation, Pagination, Autoplay],
+      direction: 'horizontal',
+      slidesPerView: 3,
+      autoHeight: true,
+      loop: true,
+      spaceBetween: 10,
+      autoplay: {
+        delay: 5000,
+      },
 
-        breakpoints: {
-            320: {
-                slidesPerView: 1,
-              
-            },
-            780: {
-                slidesPerView: 2,
+
+      breakpoints: {
+        // when window width is >= 320px
+        320: {
+          slidesPerView: 1.2,
+          spaceBetween: 10
+        },
+        // when window width is >= 640px
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 10
+        },
+        992: {
+          slidesPerView: 3,
+          spaceBetween: 10
+        }
+      },
+
+
+      // Navigation arrows
+      navigation: {
+        nextEl: '.swiper-button-next-custom',
+        prevEl: '.swiper-button-prev-custom',
+      },
+
+    });
+
+
+    function dropBoxAutoHeight(elemsArr) {
+      const triger = document.querySelectorAll(elemsArr);
+
+      triger.forEach(elem => {
+        elem.addEventListener('click', function () {
+          elem.classList.toggle("active");
+          let panel = elem.nextElementSibling;
+
+
+          if (panel.style.maxHeight) {
+            panel.style.maxHeight = null;
+          } else {
+            panel.style.maxHeight = panel.scrollHeight + "px";
+          }
+        })
+      })
+    }
+    dropBoxAutoHeight('.faq-box__head');
+
+
+    function dropBoxAutoHeightSee(elemsArr) {
+      const triger = document.querySelectorAll(elemsArr);
+
+      triger.forEach(elem => {
+        elem.addEventListener('click', function () {
+          elem.classList.toggle("active");
+          let panel = elem.previousElementSibling;
+
+
+          if (panel.style.maxHeight) {
+            panel.style.maxHeight = null;
+            panel.style.padding = null;
+
+            elem.textContent = 'See All';
+          } else {
+            panel.style.maxHeight = (panel.scrollHeight + 20) + "px";
+            panel.style.paddingBottom = '15px';
+
+            elem.textContent = 'Close';
+          }
+        })
+      })
+    }
+    dropBoxAutoHeightSee('.dropShow');
+
+  } catch (e) {
+    console.log(e);
+  }
+
+  try {
+    const massegStatus = document.querySelector('.masseg-status');
+
+    document.querySelector("form").addEventListener("submit", function (e) {
+      e.preventDefault(); // Зупиняємо стандартну дію відправки форми
+
+      let form = this; // Використовуємо "this" для посилання на поточну форму
+
+      let formData = new FormData(form); // Створюємо об'єкт FormData для збору даних з форми
+
+      let xhr = new XMLHttpRequest(); // Створюємо новий об'єкт XMLHttpRequest
+
+      xhr.open("POST", "mail.php", true);
+
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4) {
+          if (xhr.status === 200) {
+            let response = JSON.parse(xhr.responseText);
+
+            if (response.status === "success") {
+              massegStatus.textContent = 'Thank you for your message!';
+              massegStatus.classList.add('active');
+
+              form.reset();
+
+              setTimeout(() => {
+                massegStatus.classList.remove('active');
+              }, 3000)
+            } else {
+              // Неуспішна відправка
+              massegStatus.textContent = 'Thank you for your message!';
+              massegStatus.classList.add('active');
+
+
+              setTimeout(() => {
+                massegStatus.classList.remove('Error while sending, please try again');
+              }, 3000)
             }
+          } else {
+            // Виникла помилка під час запиту
+            alert("Something went wrong");
+          }
         }
+      };
+
+      xhr.send(formData); // Надсилаємо дані форми на сервер
+    });
+
+
+  } catch (e) { console.log(e); }
+
+
+
+  try {
+    const tabs = document.querySelectorAll('.brand-card .tab'),
+      contents = document.querySelectorAll('.brand-card .content'),
+      baners = document.querySelectorAll('.brand-card .baners__picture');
+
+    tabs.forEach((tab, i) => {
+      tab.addEventListener('click', function () {
+        showBrendCard(i);
       });
+    });
 
-      const swiper_business = new Swiper('.swiper-business', {
-        modules: [ Navigation, Pagination, Autoplay ],
-      freeMode: true,
-        spaceBetween: 20,
-        loop: true,
-        
-        slidesPerView: 1.2,
-        autoHeight: true,
-        direction: 'horizontal',
-        autoplay: {
-          delay: 5000,
-          pauseOnMouseEnter: true,
-          disableOnInteraction: false
-        },
-        
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        },
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true
-        }
-      });
+    showBrendCard(0);
 
+    function showBrendCard(index) {
+      tabs.forEach(content => {
+        content.classList.remove('active');
+      })
 
-      const swiperR = new Swiper('.result-slider', {
-        modules: [ Navigation, Pagination, Autoplay ],
-        spaceBetween: 20,
-        loop: true,
-        slidesPerView: 1,
-        autoplay: {
-          delay: 2500,
-          disableOnInteraction: false,
-        },
-        autoHeight: true,
-        direction: 'horizontal',
-      
-            
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        },
-          pagination: {
-            el: '.swiper-pagination',
-          },
-      });
+      contents.forEach(content => {
+        content.classList.remove('active');
+        content.classList.add('hidden');
+      })
 
+      baners.forEach(content => {
+        content.classList.remove('active')
+        content.classList.add('hidden');
+      })
 
-      const swiper_logo = new Swiper('.swiper-logo', {
-        modules: [ Navigation, Pagination, Autoplay ],
-        spaceBetween: 20,
-        loop: true,
-        slidesPerView: 7,
-        autoHeight: true,
-        direction: 'horizontal',
-        autoplay: {
-          delay: 2500,
-          disableOnInteraction: false,
-        },
-        speed: 1000,
-            
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        },
-          pagination: {
-            el: '.swiper-pagination',
-          },
+      contents[index].classList.add('active');
+      contents[index].classList.remove('hidden');
 
-          breakpoints: {
-            320: {
-                slidesPerView: 3,
-                spaceBetween: 10,
-            },
-            780: {
-                slidesPerView: 7,
-            }
-        }
-      });
+      tabs[index].classList.add('active');
 
-      if(window.innerWidth < 568) {
-
-      // const slider_card = new Swiper('.slider-card', {
-      //   modules: [ Navigation, Pagination ],
-      //   freeMode: true,
-      //   spaceBetween: 20,
-      //   loop: true,
-      //   autoHeight: true,
-      //   direction: 'horizontal',
-      
-      
-      //   pagination: {
-      //     el: '.swiper-pagination',
-      //     clickable: true
-      //   },
-      // });
-
-
-
-      // const experiences_mobail = new Swiper('.experiences-mobail', {
-      //   modules: [ Navigation, Pagination ],
-      //   freeMode: true,
-      //   spaceBetween: 20,
-      //   loop: true,
-      //   autoHeight: true,
-      //   direction: 'horizontal',
-      
-      
-      //   pagination: {
-      //     el: '.swiper-pagination',
-      //     clickable: true
-      //   },
-      // });
-
-      
-        toggleClassContent('.footer-drop', 'next');
-        acorrdionBox('.those-group__top');
-      }
-
-      acorrdionBox('.faq-box__visibility');
-      acorrdionBox('.triger-list');
-      
-      modal('.btn-modal', '.modal__close', '.video_modal');
-      modal('.btn-modal_pakets_1', '.modal__close', '.modal_pakets_1');
-      modal('.btn-modal_pakets_2', '.modal__close', '.modal_pakets_2');
-      modal('.btn-modal_pakets_3', '.modal__close', '.modal_pakets_3');
-      mobailMenu();
-
-
-      history.replaceState({}, document.title, window.location.href.split('#')[0]);
+      baners[index].classList.add('active');
+      baners[index].classList.remove('hidden');
+    }
+  } catch (e) {
+    console.log(e);
+  }
 });

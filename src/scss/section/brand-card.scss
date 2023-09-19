@@ -1,0 +1,245 @@
+.brand-card {
+  padding: 52px 0 120px;
+
+  .baners {
+    margin-bottom: 40px;
+
+    &__picture {
+      position: relative;
+      width: 100%;
+      transition: opacity .9s;
+
+
+      &-img {
+        display: block;
+        width: 100%;
+        border-radius: 32px;
+      }
+    }
+
+    &__btn {
+      position: absolute;
+      bottom: 72px;
+      left: 80px;
+
+      display: block;
+      width: 100%;
+      max-width: 280px;
+      padding: 20px 30px;
+      border-radius: 8px;
+      background: #ADFF00;
+
+      color: #29375A;
+      font-weight: 500;
+      line-height: 100%; /* 150% */
+      text-transform: capitalize;
+      text-align: center;
+    }
+  }
+  .baners__picture.active {
+    visibility: visible;
+    max-width: 100%;
+    opacity: 1;
+  }
+  .baners__picture.hidden {
+    visibility: hidden;
+    max-width: 0;
+      opacity: 0;
+  }
+
+  .tabs {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 564px;
+    gap: 6px;
+    margin: 0 auto 52px;
+
+    .tab {
+      width: 100%;
+      max-width: 180px;
+      padding: 10px 20px;
+      border-radius: 8px;
+      border: 1px solid #2A58CE;
+      cursor: pointer;
+      color: #2A58CE;
+      font-weight: 500;
+      text-align: center;
+      line-height: 110%; /* 150% */
+      text-transform: capitalize;
+      transition: all 0.4s ease-in-out;
+
+      &:hover {
+         background: #2a59ce1a;
+      }
+    }
+
+    .tab.active {
+      background: #2A58CE;
+      color: #FFF;
+    }
+  }
+
+  .contents {
+    display: flex;
+
+    .content {
+      transition: opacity .9s;
+
+      &__title {
+        color: #29375A;
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 144%; /* 144.444% */
+        margin-bottom: 32px;
+        text-align: center;
+      }
+
+      &__description {
+        color: #627093;
+        font-size: 20px;
+        line-height: 160%; /* 160% */
+        margin-bottom: 52px;
+      }
+    }
+
+    .content.active {
+      visibility: visible;
+      max-width: 100%;
+      opacity: 1;
+        max-height: fit-content;
+    }
+    .content.hidden {
+      visibility: hidden;
+      max-width: 0;
+        opacity: 0;
+        max-height: 0;
+    }
+
+    .content-box {
+      &__title {
+        color: #29375A;
+        font-size: 26px;
+        font-weight: 700;
+        line-height: 120%; /* 123.077% */
+        margin-bottom: 20px;
+      }
+
+      &__wrapper {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+
+      &__item {
+        color: #627093;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 155%; /* 155.556% */
+        padding: 8px 24px;
+        border-radius: 12px;
+        border: 1px solid #627093;
+      }
+
+      &__hidden {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        width: 100%;
+            overflow: hidden;
+      max-height: 0;
+      transition: .5s ease-in-out;
+      // padding-bottom: 5px;
+      }
+
+      .dropShow {
+        background: none;
+        border: none;
+        color: #2A58CE;
+        text-align: center;
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 100%; /* 133.333% */
+        cursor: pointer;
+      }
+    }
+
+    .content-box + .content-box {
+      margin-top: 52px;
+    }
+  }
+}
+
+.baners__picture-img.mb-none {
+  display: none;
+}
+
+
+
+@media screen and (max-width: 568px) {
+
+  .brand-card {
+  padding: 32px 0 120px;
+
+  .baners {
+    margin-bottom: 32px;
+
+    &__picture {
+
+      &-img {
+        border-radius: 16px;
+      }
+    }
+
+    &__btn {
+      position: absolute;
+      bottom: 12px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  .contents {
+    .content {
+      
+      &__title {
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+
+      &__description {
+        font-size: 16px;
+        margin-bottom: 40px;
+      }
+    }
+
+    .content-box {
+
+      &__wrapper {
+        gap: 8px;
+      }
+      
+      &__title {
+        font-size: 20px;
+      }
+      &__item {
+        font-size: 16px;
+        padding: 8px 18px;
+      }
+    }
+
+    .content-box + .content-box {
+      margin-top: 48px;
+    }
+  }
+}
+
+.baners__picture-img.mb-none {
+  display: block;
+}
+ 
+.baners__picture-img.pc-none {
+  display: none;
+}
+  
+}

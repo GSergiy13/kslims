@@ -1,0 +1,231 @@
+.events {
+  padding: 40px 0 90px;
+  background-image: url('@img/bg-bottom.png');
+  background-size: cover;
+  background-position: bottom ;
+  background-repeat: no-repeat;
+  transform: translateY(-1px);
+
+  &__title {
+    color: #fff;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 144%; /* 144.444% */
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 32px;
+  }
+
+
+  &__item {
+    &-icon {
+      display: block;
+      width: 100%;
+      max-width: 74px;
+    }
+
+    &-date {
+      width: 92px;
+      text-align: center;
+      color: #29375A;
+      line-height: 112%; /* 112.5% */
+    }
+    &:nth-child(1) {
+      position: relative;
+      display: flex;
+      width: 30%;
+      gap: 32px;
+      background: #fff;
+      padding: 34px 5% 38px 10%;
+
+
+      &::after {
+        position: absolute;
+        content: '';
+        right: 0;
+        top: 100%;
+        width: 80px;
+        height: 100%;
+        background-image: url('@img/events_decoration-left.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        transform: translate(80%,-100%);
+      }
+    }
+
+    &:nth-child(2) {
+      padding: 22px 10% 22px 10%;
+      width: 40%;
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      background: #2C427A;
+
+      .events__item-date {
+        color: #fff;
+      }
+    }
+    &:nth-child(3) {
+      position: relative;
+      background: #fff;
+      display: flex;
+      gap: 32px;
+      width: 30%;
+      background: #fff;
+      padding: 34px 10% 38px 5%;
+
+      &::after {
+        position: absolute;
+        content: '';
+        left: 0;
+        top: 100%;
+        width: 80px;
+        height: 100%;
+        background-image: url('@img/events_decoration-right.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        transform: translate(-80%,-100%);
+      }
+    }
+  }
+
+  .btn-border {
+    display: block;
+    width: 100%;
+    max-width: 280px;
+    border-radius: 8px;
+    padding: 20px 30px;
+    border: 1px solid #ADFF00;
+    color: #ADFF00;
+    font-weight: 500;
+    line-height: 150%;
+    text-align: center;
+    text-transform: capitalize;
+    margin: 0 auto;
+  transition: all 0.6s;
+
+    &:hover {
+            border: 1px solid #C6FF4D;
+    color: #C6FF4D;
+
+      
+    }
+
+  }
+}
+
+
+
+
+
+@media screen and (max-width: 1440px) {
+
+.events {
+
+  &__title {
+    font-size: 32px;
+    margin-bottom: 30px;
+  }
+
+  &__wrapper {
+    margin-bottom: 22px;
+  }
+
+
+  &__item {
+
+    &-date {
+      position: relative;
+      z-index: 5;
+    }
+
+    &-icon {
+      max-width: 64px;
+    }
+    &:nth-child(1) {
+      padding: 34px 2% 38px 3%;
+    }
+
+    &:nth-child(2) {
+      padding: 22px 5% 22px 5%;
+
+    }
+    &:nth-child(3) {
+      padding: 34px 3% 38px 2%;
+    }
+  }
+}
+
+}
+
+
+
+@media screen and (max-width: 992px) {
+
+.events {
+  padding-bottom: 60px;
+    background-image: url('@img/bg-bottom-mobail.png');
+
+  &__title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  &__wrapper {
+    margin-bottom: 32px;
+    gap: 20px;
+    flex-direction: column;
+  }
+
+
+  &__item {
+
+    &-date {
+      position: relative;
+      z-index: 5;
+    }
+
+    &-icon {
+      max-width: 64px;
+    }
+    &:nth-child(1) {
+      display: flex;
+      justify-content: center;
+      padding: 26px 2% 26px 3%;
+      width: 80%;
+      margin-right: auto;
+    }
+
+    &:nth-child(2) {
+      padding: 22px 5% 22px 5%;
+      width: 100%;
+
+    }
+    &:nth-child(3) {
+      display: flex;
+      justify-content: center;
+      padding: 26px 3% 26px 2%;
+      width: 80%;
+      margin-left: auto;
+    }
+  }
+
+
+
+  .btn-border {
+    padding: 14px 30px;
+
+  }
+
+}
+
+}
+
+// Brands page

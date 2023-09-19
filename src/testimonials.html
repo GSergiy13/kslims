@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/head.html',{
+"title":"LALA STARS - to the moon together"
+})
+
+<body>
+	<div id="preloader" class="preloader">
+		<svg class="pl preloader__loader" viewBox="0 0 128 128" width="128px" height="128px">
+			<defs>
+				<linearGradient id="pl-grad" x1="0" y1="0" x2="0" y2="1">
+					<stop offset="0%" stop-color="#000" />
+					<stop offset="100%" stop-color="#fff" />
+				</linearGradient>
+				<mask id="pl-mask">
+					<rect x="0" y="0" width="128" height="128" fill="url(#pl-grad)" />
+				</mask>
+			</defs>
+			<g stroke-dasharray="32 32" stroke-dashoffset="-32" stroke-linecap="round" stroke-width="6">
+				<g class="pl__layer">
+					<g class="pl__lines" stroke="hsl(48,90%,50%)">
+						<g class="pl__line-g" transform="rotate(0,64,64) translate(0,-28)">
+							<polyline class="pl__line" points="64 32,64 64" />
+						</g>
+						<g class="pl__line-g" transform="rotate(30,64,64) translate(0,-28)">
+							<polyline class="pl__line" points="64 32,64 64" />
+						</g>
+						<g class="pl__line-g" transform="rotate(60,64,64) translate(0,-28)">
+							<polyline class="pl__line" points="64 32,64 64" />
+						</g>
+						<g class="pl__line-g" transform="rotate(90,64,64) translate(0,-28)">
+							<polyline class="pl__line" points="64 32,64 64" />
+						</g>
+						<g class="pl__line-g" transform="rotate(120,64,64) translate(0,-28)">
+							<polyline class="pl__line" points="64 32,64 64" />
+						</g>
+						<g class="pl__line-g" transform="rotate(150,64,64) translate(0,-28)">
+							<polyline class="pl__line" points="64 32,64 64" />
+						</g>
+						<g class="pl__line-g" transform="rotate(180,64,64) translate(0,-28)">
+							<polyline class="pl__line" points="64 32,64 64" />
+						</g>
+						<g class="pl__line-g" transform="rotate(210,64,64) translate(0,-28)">
+							<polyline class="pl__line" points="64 32,64 64" />
+						</g>
+						<g class="pl__line-g" transform="rotate(240,64,64) translate(0,-28)">
+							<polyline class="pl__line" points="64 32,64 64" />
+						</g>
+						<g class="pl__line-g" transform="rotate(270,64,64) translate(0,-28)">
+							<polyline class="pl__line" points="64 32,64 64" />
+						</g>
+						<g class="pl__line-g" transform="rotate(300,64,64) translate(0,-28)">
+							<polyline class="pl__line" points="64 32,64 64" />
+						</g>
+						<g class="pl__line-g" transform="rotate(330,64,64) translate(0,-28)">
+							<polyline class="pl__line" points="64 32,64 64" />
+						</g>
+					</g>
+				</g>
+				<g class="pl__layer" mask="url(#pl-mask)">
+					<g class="pl__lines" stroke="hsl(18,90%,50%)">
+						<g class="pl__line-g" transform="rotate(0,64,64) translate(0,-28)">
+							<polyline class="pl__line" points="64 32,64 64" />
+						</g>
+						<g class="pl__line-g" transform="rotate(30,64,64) translate(0,-28)">
+							<polyline class="pl__line" points="64 32,64 64" />
+						</g>
+						<g class="pl__line-g" transform="rotate(60,64,64) translate(0,-28)">
+							<polyline class="pl__line" points="64 32,64 64" />
+						</g>
+						<g class="pl__line-g" transform="rotate(90,64,64) translate(0,-28)">
+							<polyline class="pl__line" points="64 32,64 64" />
+						</g>
+						<g class="pl__line-g" transform="rotate(120,64,64) translate(0,-28)">
+							<polyline class="pl__line" points="64 32,64 64" />
+						</g>
+						<g class="pl__line-g" transform="rotate(150,64,64) translate(0,-28)">
+							<polyline class="pl__line" points="64 32,64 64" />
+						</g>
+						<g class="pl__line-g" transform="rotate(180,64,64) translate(0,-28)">
+							<polyline class="pl__line" points="64 32,64 64" />
+						</g>
+						<g class="pl__line-g" transform="rotate(210,64,64) translate(0,-28)">
+							<polyline class="pl__line" points="64 32,64 64" />
+						</g>
+						<g class="pl__line-g" transform="rotate(240,64,64) translate(0,-28)">
+							<polyline class="pl__line" points="64 32,64 64" />
+						</g>
+						<g class="pl__line-g" transform="rotate(270,64,64) translate(0,-28)">
+							<polyline class="pl__line" points="64 32,64 64" />
+						</g>
+						<g class="pl__line-g" transform="rotate(300,64,64) translate(0,-28)">
+							<polyline class="pl__line" points="64 32,64 64" />
+						</g>
+						<g class="pl__line-g" transform="rotate(330,64,64) translate(0,-28)">
+							<polyline class="pl__line" points="64 32,64 64" />
+						</g>
+					</g>
+				</g>
+			</g>
+		</svg>
+
+
+	</div>
+	<div class="wrapper">
+		@@include('html/header.html',{})
+
+		<section class="testimonials">
+			<div class="container">
+				<a class="testimonials__back" href="index.html">Back</a>
+
+				<h1 class="testimonials__title">
+					Testimonials
+				</h1>
+
+				<div class="testimonials__wrapper">
+					<div class="testimonials-box">
+						<img class="testimonials-box__logo" src="@img/partners/partners-1.png" alt="logo partners">
+
+						<img class="testimonials-box__status" src="@img/stars.svg" alt="start-status"></img>
+
+						<p class="testimonials-box__description">
+							Our players have benefited much from Lala-stars' collaboration. Very cutting-edge product that delivers a
+							top-notch
+							playing experience. We at enkeltcasino.com can highly recommend lal.bet. Awesome affiiliate managesr -
+							quick to respond
+							and trustworthy.
+						</p>
+
+						<a class="testimonials-box__link" href="https://enkeltcasino.com">enkeltcasino.com</a>
+					</div>
+
+					<div class="testimonials-box">
+						<img class="testimonials-box__logo" src="@img/partners/partners-2.jpg" alt="logo partners">
+
+						<img class="testimonials-box__status" src="@img/stars.svg" alt="start-status"></img>
+
+						<p class="testimonials-box__description">
+							After working with Lala Stars for quite some time, we can confidently say that they are one of the best in
+							this
+							industry. They have a lot of great betting products and features that attract more traffic easily. Payment
+							is also
+							always on time with them, which is great.
+						</p>
+
+						<a class="testimonials-box__link" href="https://betzillion.com">betzillion.com</a>
+					</div>
+
+					<div class="testimonials-box">
+						<img class="testimonials-box__logo" src="@img/partners/partners-3.png" alt="logo partners">
+
+						<img class="testimonials-box__status" src="@img/stars.svg" alt="start-status"></img>
+
+						<p class="testimonials-box__description">
+							We’ve had a great experience with every casino brand from Lala-stars Affiliates. Definitely one of the
+							best online
+							casino affiliate programs and we’re hoping for a long and successful cooperation.
+						</p>
+
+						<a class="testimonials-box__link" href="https://nederlandscasinos.net">nederlandscasinos.net</a>
+					</div>
+
+					<div class="testimonials-box">
+						<img class="testimonials-box__logo" src="@img/partners/partners-4.png" alt="logo partners">
+
+						<img class="testimonials-box__status" src="@img/stars.svg" alt="start-status"></img>
+
+						<p class="testimonials-box__description">
+							We've been thoroughly impressed with Lala-stars Affiliates. Their free spins promotions are a hit with our
+							users and
+							their commitment to quality service is second to none.
+						</p>
+
+						<a class="testimonials-box__link" href="https://gamblizard.de">gamblizard.de</a>
+					</div>
+
+					<div class="testimonials-box">
+						<img class="testimonials-box__logo" src="@img/partners/partners-5.png" alt="logo partners">
+
+						<img class="testimonials-box__status" src="@img/stars.svg" alt="start-status"></img>
+
+						<p class="testimonials-box__description">
+							We enjoyed working with Lala-stars Affiliates. High conversion rates and excellent casino brands are hard
+							proof that
+							they know how to do the best work. Definitely the best gaming experience for players in the Netherlands!
+						</p>
+
+						<a class="testimonials-box__link" href="https://onlinecasinosnl.com">onlinecasinosnl.com</a>
+					</div>
+
+					<div class="testimonials-box">
+						<img class="testimonials-box__logo" src="@img/partners/partners-6.png" alt="logo partners">
+
+						<img class="testimonials-box__status" src="@img/stars.svg" alt="start-status"></img>
+
+						<p class="testimonials-box__description">
+							We are very pleased with Lala-stars. This new affiliate has amazing managers who are very helpful and
+							competent. On top
+							of that, they also have a rewarding program. Their brand from Casbit Group, Lala.bet Casino, is amazing as
+							well and
+							deserves a place on our Casbit Group N.V. casinos page. We recommend working with Lala-stars !
+						</p>
+
+						<a class="testimonials-box__link" href="https://onlinecasinogroups.com">onlinecasinogroups.com</a>
+					</div>
+
+					<div class="testimonials-box">
+						<img class="testimonials-box__logo" src="@img/partners/partners-7.png" alt="logo partners">
+
+						<img class="testimonials-box__status" src="@img/stars.svg" alt="start-status"></img>
+
+						<p class="testimonials-box__description">
+							We are so fortunate to work with the Lala.bet! They are among the top betting operators in Brazil,
+							constantly delivering
+							value to their customers. The team are so helpful and got your back when you need something. We’ve built a
+							great
+							partnership with no doubts that we will continue to grow together.
+						</p>
+
+						<a class="testimonials-box__link" href="https://casa-apostas.com">casa-apostas.com</a>
+					</div>
+
+					<div class="testimonials-box">
+						<img class="testimonials-box__logo" src="@img/partners/partners-8.png" alt="logo partners">
+
+						<img class="testimonials-box__status" src="@img/stars.svg" alt="start-status"></img>
+
+						<p class="testimonials-box__description">
+							Nossa parceria com a Lala-stars tem sido verdadeiramente notável. Eles constantemente superam as
+							expectativas,
+							fornecendo apoio excepcional e soluções inovadoras. Seu compromisso inabalável com a satisfação do cliente
+							gerou uma
+							colaboração frutífera com a Casinosnobrasil, consolidando ainda mais sua posição como um programa de
+							afiliados de
+							primeira linha. À medida que buscamos expandir nossa aliança e alcançar novas metas juntos, recomendamos
+							com confiança a
+							Lala-stars.com por sua expertise incomparável, dedicação e comprovado histórico de sucesso.
+						</p>
+
+						<a class="testimonials-box__link" href="https://casinosnobrasil.com.br">casinosnobrasil.com.br</a>
+					</div>
+
+					<div class="testimonials-box">
+						<img class="testimonials-box__logo" src="@img/partners/partners-9.png" alt="logo partners">
+
+						<img class="testimonials-box__status" src="@img/stars.svg" alt="start-status"></img>
+
+						<p class="testimonials-box__description">
+							Our partnership with [Affiliate Company Name] has been exceptional. Their diverse portfolio of online
+							casino brands
+							caters to various player preferences, ensuring high player engagement and retention. We are proud to
+							promote their
+							brands and experience the mutual success of our collaboration.
+						</p>
+
+						<a class="testimonials-box__link" href="https://slotsup.com">slotsup.com</a>
+					</div>
+
+					<div class="testimonials-box">
+						<img class="testimonials-box__logo" src="@img/partners/partners-10.png" alt="logo partners">
+
+						<img class="testimonials-box__status" src="@img/stars.svg" alt="start-status"></img>
+
+						<p class="testimonials-box__description">
+							Lala Stars Affiliates has transformed the way we do business. Their innovative platform, coupled with a
+							team of
+							professionals always ready to go the extra mile, has made our collaboration extremely fruitful. Looking
+							forward to more
+							successful years together.
+						</p>
+
+						<a class="testimonials-box__link" href="https://mrcasinova.com">mrcasinova.com</a>
+					</div>
+
+					<div class="testimonials-box">
+						<img class="testimonials-box__logo" src="@img/partners/partners-11.png" alt="logo partners">
+
+						<img class="testimonials-box__status" src="@img/stars.svg" alt="start-status"></img>
+
+						<p class="testimonials-box__description">
+							Our experience with Lala Stars Affiliates has been incredibly positive. Their attention to detail and
+							dedication to
+							providing the best possible service is remarkable. Their approach to affiliate partnerships is second to
+							none.
+						</p>
+
+						<a class="testimonials-box__link" href="https://casinotroll.com">casinotroll.com</a>
+					</div>
+
+					<div class="testimonials-box">
+						<img class="testimonials-box__logo" src="@img/partners/partners-12.png" alt="logo partners">
+
+						<img class="testimonials-box__status" src="@img/stars.svg" alt="start-status"></img>
+
+						<p class="testimonials-box__description">
+							Lala Stars Affiliates' exceptional service and user-friendly platform have surpassed all our expectations.
+							Their
+							dedicated and knowledgeable team is always available to provide assistance and guidance, making our
+							partnership a real
+							success.
+						</p>
+
+						<a class="testimonials-box__link" href="https://casinopilot24.com">casinopilot24.com</a>
+					</div>
+
+					<div class="testimonials-box">
+						<img class="testimonials-box__logo" src="@img/partners/partners-13.png" alt="logo partners">
+
+						<img class="testimonials-box__status" src="@img/stars.svg" alt="start-status"></img>
+
+						<p class="testimonials-box__description">
+							We've been working with Lala Stars Affiliates for quite some time now, and the experience has been nothing
+							short of
+							exceptional. Their attractive commission structure and high-quality brands make it a win-win partnership
+							for us.
+						</p>
+
+						<a class="testimonials-box__link" href="https://handycasinos24.com">handycasinos24.com</a>
+					</div>
+
+
+					<div class="testimonials-box">
+						<img class="testimonials-box__logo" src="@img/partners/partners-14.png" alt="logo partners">
+
+						<img class="testimonials-box__status" src="@img/stars.svg" alt="start-status"></img>
+
+						<p class="testimonials-box__description">
+							Lala Stars Affiliates have been a key partner in helping us expand our reach. Their transparent practices
+							and commitment
+							to excellence make them a standout in the industry. We are excited to continue growing together.
+						</p>
+
+						<a class="testimonials-box__link" href="https://neuecasinos24.com">neuecasinos24.com</a>
+					</div>
+
+					<div class="testimonials-box">
+						<img class="testimonials-box__logo" src="@img/partners/partners-15.png" alt="logo partners">
+
+						<img class="testimonials-box__status" src="@img/stars.svg" alt="start-status"></img>
+
+						<p class="testimonials-box__description">
+							Partnering with Lala Stars Affiliates has been a breeze. Their advanced tracking system, combined with a
+							team that's
+							always ready to help, has helped us increase our revenue significantly. I couldn't be happier with our
+							collaboration.
+						</p>
+
+						<a class="testimonials-box__link" href="https://nieuwe-casinos.net">nieuwe-casinos.net</a>
+					</div>
+
+					<div class="testimonials-box">
+						<img class="testimonials-box__logo" src="@img/partners/partners-16.png" alt="logo partners">
+
+						<img class="testimonials-box__status" src="@img/stars.svg" alt="start-status"></img>
+
+						<p class="testimonials-box__description">
+							Lala Stars Affiliates are the gold standard of affiliate programs. Their team is always quick to respond,
+							proactive, and
+							they offer some of the most competitive rates in the industry. It's been a pleasure working with them.
+						</p>
+
+						<a class="testimonials-box__link" href="https://casinozonderregistratie.net">casinozonderregistratie.net</a>
+					</div>
+
+					<div class="testimonials-box">
+						<img class="testimonials-box__logo" src="@img/partners/partners-17.png" alt="logo partners">
+
+						<img class="testimonials-box__status" src="@img/stars.svg" alt="start-status"></img>
+
+						<p class="testimonials-box__description">
+							LalaBet looks like an interesting brand for our Peruvian players. We are excited to try it and looking
+							forward to
+							establishing cooperation with LalaStars Affiliates.
+						</p>
+
+						<a class="testimonials-box__link" href="https://casinohex.pe">casinohex.pe</a>
+					</div>
+
+
+					<div class="testimonials-box">
+						<img class="testimonials-box__logo" src="@img/partners/partners-18.png" alt="logo partners">
+
+						<img class="testimonials-box__status" src="@img/stars.svg" alt="start-status"></img>
+
+						<p class="testimonials-box__description">
+							CasinoGrounds is delighted to have partnered with LalaStars, promoting their brand. We are looking forward
+							to growing
+							together. Great team & Brand!
+						</p>
+
+						<a class="testimonials-box__link" href="https://casinogrounds.com">casinogrounds.com</a>
+					</div>
+
+
+				</div>
+			</div>
+		</section>
+
+		@@include('html/footer.html',{})
+	</div>
+
+
+	<script src="js/app.min.js"></script>
+</body>
+
+</html>

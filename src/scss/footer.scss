@@ -1,215 +1,106 @@
 .footer {
-    background: #0E1726;
-    padding: 60px 0;
+  background: #07193A;
+  padding: 40px 0;
+  color: #fff;
 
-    &__wrapper {
-        display: flex;
-        justify-content: space-between;
-    }
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
 
-    &__title {
-        margin-bottom: 15px;
-        font-weight: 500;
-        font-size: 18px;
-        line-height: 100%;
-        color: #D67F33;
-    }
+  .nav-footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    width: 100%;
+    max-width: 545px;
 
-    &__links {
-        position: relative;
+    &__item {
+      &-title {
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 130%; 
+        margin-bottom: 12px;
+      }
+
+      &-link {
         display: block;
-        width: fit-content;
+        color: rgba(255, 255, 255, 0.60);
+        font-size: 12px;
+        font-style: normal;
         font-weight: 400;
-        font-size: 16px;
-        line-height: 25px;
-        margin-bottom: 20px;
-
-        &::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 1px;
-            background-color: #D67F33;
-            transition: all 0.5s;
-        }
+        line-height: 133%; /* 133.333% */
+        transition: all 0.5s;
 
         &:hover {
-
-            &::after {
-                width: 100%;
-            }
-
+          color: #fff;
         }
-    }
+      }
 
-    .footer-logo {
+       &-link + .nav-footer__item-link {
+        margin-top: 8px;
+       }
+    }
+  }
+
+  .social {
+    display: flex;
+    gap: 12px;
+
+    &__link {
+      display: block;
+      width: 100%;
+      max-width: 32px;
+      opacity: 0.6;
+      transition: all 0.6s;
+
+      &-icon {
+        display: block;
         width: 100%;
-        max-width: 160px;
+      }
 
-        &__img {
-            display: block;
-            width: 100%;
-            max-width: 160px;
-        }
-
-        &__social {
-            display: flex;
-            gap: 25px;
-            margin: 20px 0;
-
-            &-link {
-                display: block;
-            }
-
-            &-icon {
-                display: block;
-                transition: all 0.5s;
-
-                &:hover {
-                    transform: rotate(360deg);
-                }
-            }
-
-            &__years {
-                font-weight: 400;
-                font-size: 12px;
-                line-height: 15px;
-                text-transform: uppercase;
-            }
-        }
+      &:hover {
+        opacity: 1;
+      }
     }
+  }
+}
 
-    .footer-info {
-        width: 100%;
-        max-width: 265px;
-    }
 
-    .footer-partners {
-        width: 100%;
-        max-width: 160px;
 
-        &__img {
-            width: 100%;
-            max-width: 130px;
-            display: block;
-            border-radius: 10px;
-        }
-    }
 
-    .footer-responsibly {
-        width: 100%;
-        max-width: 280px;
-    }
+@media screen and (max-width: 768px) {
+.footer {
+
+
+  .nav-footer {
+    max-width: 400px;
+
+
+  }
+
+}
 }
 
 
 
 @media screen and (max-width: 568px) {
-    .footer {
-        position: relative;
-        padding: 20px 0 100px;
+.footer {
+  padding: 50px 0 72px;
 
-        &__wrapper {
-            flex-direction: column;
-        }
+  &__wrapper {
+    flex-direction: column-reverse;
+  }
 
-        .footer-drop {
-            position: relative;
-            margin-bottom: 0;
+  .nav-footer {
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 23px;
+  }
+  .social {
+    margin: 0 auto 40px;
+  }
 
-            &::after {
-                content: '';
-                position: absolute;
-                right: 0;
-                top: 50%;
-                width: 20px;
-                height: 20px;
-                background-image: url('@img/icons/more-icons.svg');
-                background-size: contain;
-                background-repeat: no-repeat;
-                background-position: center;
-                transition: all 0.5s;
-                transform: rotate(90deg) translateX(-50%);
-            }
-        }
-
-        .footer-drop.active {
-            &::after {
-                transform: rotate(270deg) translateX(50%);
-            }
-        }
-
-        .footer-logo {
-            order: 1;
-            margin-bottom: 20px;
-
-            &__social {
-                width: fit-content;
-                position: absolute;
-                bottom: 35px;
-                left: 50%;
-                transform: translateX(-50%);
-            }
-
-            &__years {
-                position: absolute;
-                bottom: 10px;
-                left: 50%;
-                transform: translateX(-50%);
-            }
-        }
-
-        .footer-info {
-            padding: 15px 0;
-            max-width: 100%;
-            order: 4;
-            border-bottom: 2px solid #fff;
-
-            &__inner {
-                height: 0;
-                overflow: hidden;
-                opacity: 0;
-                padding-top: 0;
-                transition: all 0.5s;
-                width: 80%;
-            }
-        }
-
-        .footer-partners {
-            .footer__title {
-                color: #fff;
-            }
-
-            max-width: 100%;
-            order: 2;
-            margin-bottom: 15px;
-        }
-
-        .footer-responsibly {
-            border-top: 2px solid #fff;
-            border-bottom: 2px solid #fff;
-
-            padding: 15px 0;
-            max-width: 100%;
-            order: 3;
-
-            &__inner {
-                height: 0;
-                overflow: hidden;
-                opacity: 0;
-                padding-top: 0px;
-                transition: all 0.5s;
-                width: 80%;
-            }
-        }
-    }
-
-    .footer-responsibly__inner.active,
-    .footer-info__inner.active {
-        height: auto;
-        opacity: 1;
-        padding-top: 15px;
-    }
+}
 }

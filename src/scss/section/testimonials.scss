@@ -1,0 +1,124 @@
+.testimonials {
+  padding: 32px 0 120px;
+
+  &__back {
+    position: relative;
+    display: block;
+    padding-left: 40px;
+    color: #2A58CE;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 133%; /* 133.333% */
+    margin-bottom: 32px;
+
+    &::after {
+      position: absolute;
+      content: '';
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 28px;
+      height: 12px;
+      background-image: url('@img/icon/arrows-back.png');
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+
+  &__title {
+    color: #29375A;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 100%;
+    text-transform: uppercase;
+    margin-bottom: 60px;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 64px 30px;
+  }
+
+  .testimonials-box {
+    width: 100%;
+    max-width: calc(50% - 36px);
+
+    &__logo {
+    display: block;
+    width: 100%;
+    max-width: 122px;
+    margin-bottom: 8px;
+    background: #2a58ce1f;
+    padding: 5px;
+    border-radius: 2px;
+    }
+
+    &__status {
+      display: block;
+      width: 100%;
+      max-width: 120px;
+      margin-bottom: 20px;
+    }
+
+    &__description {
+      color: #627093;
+      font-size: 18px;
+      line-height: 155%; /* 155.556% */
+      margin-bottom: 12px;
+    }
+
+    &__link {
+      color: #2A58CE;
+    }
+  }
+}
+
+
+
+@media screen and (max-width: 568px) {
+.testimonials {
+  padding: 32px 0 120px;
+
+  &__wrapper {
+    flex-direction: column;
+    gap: 64px 30px;
+  }
+
+  .testimonials-box {
+    width: 100%;
+    max-width: 100%;
+
+    &__logo {
+    display: block;
+    width: 100%;
+    max-width: 122px;
+    margin-bottom: 8px;
+    background: #2a58ce1f;
+    padding: 5px;
+    border-radius: 2px;
+    }
+
+    &__status {
+      display: block;
+      width: 100%;
+      max-width: 120px;
+      margin-bottom: 20px;
+    }
+
+    &__description {
+      color: #627093;
+      font-size: 18px;
+      line-height: 155%; /* 155.556% */
+      margin-bottom: 12px;
+    }
+
+    &__link {
+      color: #2A58CE;
+    }
+  }
+}
+
+
+}
